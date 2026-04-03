@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EliteJet Charter</title>
+
+<style>
+:root {
+    --blue: #0b1f4d;
+    --silver: #c0c7d1;
+    --light: #f5f7fa;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: var(--light);
+    color: var(--blue);
+}
+
+/* HEADER */
+header {
+    background: var(--blue);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+}
+
+header h1 {
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: var(--white);
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--silver);
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(11,31,77,0.8), rgba(11,31,77,0.8)),
+    url('https://images.unsplash.com/photo-1542291026-7eec264c27ff');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* GLASS BOOKING BAR */
+.booking-bar {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.booking-bar input, .booking-bar select {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+}
+
+.booking-bar button {
+    background: var(--silver);
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* SECTION */
+.section {
+    padding: 60px 5%;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* FLEET */
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.fleet-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.fleet-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.fleet-card .content {
+    padding: 15px;
+}
+
+.specs {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* DESTINATIONS */
+.dest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.dest-card {
+    background: var(--blue);
+    color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.dest-card:hover {
+    transform: translateY(-5px);
+    background: #142c70;
+}
+
+/* CONCIERGE */
+.concierge {
+    background: var(--blue);
+    color: var(--white);
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.concierge input, .concierge textarea {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    display: block;
+}
+
+.concierge button {
+    background: var(--silver);
+    border: none;
+    padding: 12px 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #091737;
+    color: var(--silver);
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    .hero h2 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>EliteJet Charter</h1>
+    <nav>
+        <a href="#">Fleet</a>
+        <a href="#">Destinations</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Luxury Private Jet Charter</h2>
+    <p>Fly anywhere in the world with unmatched comfort and discretion.</p>
+
+    <div class="booking-bar">
+        <input type="text" placeholder="From">
+        <input type="text" placeholder="To">
+        <input type="date">
+        <select>
+            <option>Passengers</option>
+            <option>1-4</option>
+            <option>5-8</option>
+            <option>9+</option>
+        </select>
+        <button>Search Flights</button>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Our Fleet</h2>
+    <div class="fleet-grid">
+        <div class="fleet-card">
+            <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933">
+            <div class="content">
+                <h3>Gulfstream G650</h3>
+                <div class="specs">Range: 7,000 nm | Speed: 956 km/h | Capacity: 18</div>
+            </div>
+        </div>
+        <div class="fleet-card">
+            <img src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab">
+            <div class="content">
+                <h3>Bombardier Global 7500</h3>
+                <div class="specs">Range: 7,700 nm | Speed: 982 km/h | Capacity: 19</div>
+            </div>
+        </div>
+        <div class="fleet-card">
+            <img src="https://images.unsplash.com/photo-1493238792000-8113da705763">
+            <div class="content">
+                <h3>Cessna Citation X</h3>
+                <div class="specs">Range: 3,460 nm | Speed: 972 km/h | Capacity: 12</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Global Destinations</h2>
+    <div class="dest-grid">
+        <div class="dest-card">
+            <h3>Dubai</h3>
+            <p>Luxury, skyline, and elite business hub.</p>
+        </div>
+        <div class="dest-card">
+            <h3>London</h3>
+            <p>Financial capital with timeless prestige.</p>
+        </div>
+        <div class="dest-card">
+            <h3>New York</h3>
+            <p>The city that never sleeps.</p>
+        </div>
+        <div class="dest-card">
+            <h3>Paris</h3>
+            <p>Elegance, culture, and world-class cuisine.</p>
+        </div>
+    </div>
+</section>
+
+<section class="concierge">
+    <h2>VIP Concierge</h2>
+    <p>Our dedicated team is available 24/7 to tailor your journey.</p>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email">
+    <textarea rows="4" placeholder="Your request"></textarea>
+    <button>Request VIP Service</button>
+</section>
+
+<footer>
+    <p>© 2026 EliteJet Charter | Luxury Aviation Services Worldwide</p>
+</footer>
+
+</body>
+</html>

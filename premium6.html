@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenVolt Solar Solutions</title>
+
+<style>
+:root {
+    --green: #1f4d3b;
+    --brown: #8b5e3c;
+    --light: #f5f5f5;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--light);
+    color: #333;
+}
+
+/* Header */
+header {
+    background: var(--green);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('https://images.unsplash.com/photo-1509395176047-4a66953fd231');
+    background-size: cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+/* Sections */
+.section {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 12px 20px;
+    border: none;
+    background: var(--brown);
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.tab-btn.active {
+    background: var(--green);
+}
+
+.tab-content {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Counter */
+.counter {
+    text-align: center;
+    font-size: 40px;
+    color: var(--green);
+}
+
+/* Calculator */
+.calculator input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+button {
+    background: var(--green);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+}
+
+/* Form */
+form input, form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+footer {
+    background: var(--brown);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>GreenVolt Solar Solutions</h2>
+</header>
+
+<section class="hero">
+    <h1>Clean Energy for a Sustainable Future</h1>
+    <p>Power your home or business with solar energy.</p>
+</section>
+
+<!-- Sustainability Counter -->
+<section class="section">
+    <h2>Sustainability Impact</h2>
+    <div class="counter" id="counter">0</div>
+    <p style="text-align:center;">Tons of CO₂ saved</p>
+</section>
+
+<!-- Services Tabs -->
+<section class="section">
+    <h2>Our Services</h2>
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('res')">Residential</button>
+        <button class="tab-btn" onclick="showTab('com')">Commercial</button>
+    </div>
+
+    <div id="res" class="tab-content active">
+        <h3>Residential Solar</h3>
+        <p>Affordable rooftop systems, net metering, and battery storage for homes.</p>
+    </div>
+
+    <div id="com" class="tab-content">
+        <h3>Commercial Solar</h3>
+        <p>Large-scale installations, ROI optimization, and energy audits for businesses.</p>
+    </div>
+</section>
+
+<!-- Calculator -->
+<section class="section">
+    <h2>Solar Savings Calculator</h2>
+    <div class="calculator">
+        <input type="number" id="bill" placeholder="Monthly electricity bill ($)">
+        <input type="number" id="sun" placeholder="Average sunlight hours/day">
+        <button onclick="calculateSavings()">Calculate Savings</button>
+        <p id="result"></p>
+    </div>
+</section>
+
+<!-- Contact Form -->
+<section class="section">
+    <h2>B2B Contact Form</h2>
+    <form>
+        <input type="text" placeholder="Company Name" required>
+        <input type="text" placeholder="Contact Person" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number">
+
+        <select required>
+            <option value="">Business Type</option>
+            <option>Manufacturing</option>
+            <option>Retail</option>
+            <option>Corporate Office</option>
+        </select>
+
+        <input type="number" placeholder="Monthly Energy Consumption (kWh)">
+        <textarea placeholder="Project Requirements"></textarea>
+
+        <button type="submit">Submit Inquiry</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 GreenVolt Solar Solutions</p>
+</footer>
+
+<script>
+// Counter Animation
+let count = 0;
+let target = 1250;
+
+let counter = setInterval(() => {
+    count += 5;
+    document.getElementById("counter").innerText = count;
+    if (count >= target) clearInterval(counter);
+}, 20);
+
+// Tabs
+function showTab(tab) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+
+    document.getElementById(tab).classList.add('active');
+    event.target.classList.add('active');
+}
+
+// Calculator
+function calculateSavings() {
+    let bill = document.getElementById("bill").value;
+    let sun = document.getElementById("sun").value;
+
+    if (!bill || !sun) {
+        document.getElementById("result").innerText = "Please fill all fields.";
+        return;
+    }
+
+    let savings = (bill * 0.7 * sun / 5).toFixed(2);
+    document.getElementById("result").innerText =
+        "Estimated Monthly Savings: $" + savings;
+}
+</script>
+
+</body>
+</html>

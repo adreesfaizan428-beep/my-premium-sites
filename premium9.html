@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EXOTIC DRIVE | Rent Power</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+}
+
+/* Carbon fiber texture */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        #111 0px,
+        #111 2px,
+        #0a0a0a 2px,
+        #0a0a0a 4px
+    );
+    opacity: 0.4;
+    z-index: -1;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1502877338535-766e1452684a');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #ff1e1e;
+}
+
+.hero p {
+    margin: 20px 0;
+    color: #ccc;
+}
+
+.cta {
+    background: #ff1e1e;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* SECTION */
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    border-left: 5px solid #ff1e1e;
+    padding-left: 15px;
+}
+
+/* CAR GRID */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.car-card {
+    background: #111;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff1e1e;
+}
+
+.car-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 15px;
+}
+
+.car-info h3 {
+    color: #ff1e1e;
+}
+
+.specs {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 10px 0;
+}
+
+.price {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff1e1e;
+    border: none;
+    cursor: pointer;
+}
+
+/* BOOKING */
+.booking {
+    background: #111;
+    border: 1px solid #222;
+    padding: 30px;
+}
+
+.booking input, .booking select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #0a0a0a;
+    border: 1px solid #333;
+    color: white;
+}
+
+.booking button {
+    width: 100%;
+    padding: 14px;
+    background: #ff1e1e;
+    border: none;
+    font-weight: bold;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #222;
+    color: #777;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-content">
+        <h1>Drive the Unreachable</h1>
+        <p>Unleash raw horsepower. Rent the world’s most elite machines today.</p>
+        <button class="cta">Start Your Engine</button>
+    </div>
+</div>
+
+<!-- CAR SELECTION -->
+<section>
+    <h2 class="section-title">Select Your Beast</h2>
+    <div class="car-grid">
+
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+            <div class="car-info">
+                <h3>Lamborghini Huracán</h3>
+                <div class="specs">640 HP • 0-100: 2.9s</div>
+                <div class="price">$1200/day</div>
+                <button class="book-btn">Book Now</button>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c">
+            <div class="car-info">
+                <h3>Ferrari 488 GTB</h3>
+                <div class="specs">661 HP • 0-100: 3.0s</div>
+                <div class="price">$1500/day</div>
+                <button class="book-btn">Book Now</button>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d">
+            <div class="car-info">
+                <h3>McLaren 720S</h3>
+                <div class="specs">710 HP • 0-100: 2.8s</div>
+                <div class="price">$1800/day</div>
+                <button class="book-btn">Book Now</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- BOOKING -->
+<section>
+    <h2 class="section-title">Quick Booking</h2>
+    <div class="booking">
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email Address">
+        <select>
+            <option>Select Car</option>
+            <option>Lamborghini Huracán</option>
+            <option>Ferrari 488 GTB</option>
+            <option>McLaren 720S</option>
+        </select>
+        <input type="date">
+        <button>Confirm Booking</button>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+    <h2 class="section-title">Lifestyle Gallery</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1493238792000-8113da705763">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+        <img src="https://images.unsplash.com/photo-1519648023493-d82b5f8d7b8a">
+        <img src="https://images.unsplash.com/photo-1511910849309-0dffb4a6e9d1">
+    </div>
+</section>
+
+<footer>
+    © 2026 EXOTIC DRIVE — Dominate the Road
+</footer>
+
+</body>
+</html>

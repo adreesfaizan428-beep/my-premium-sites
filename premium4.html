@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aesthetic Surgery Clinic</title>
+
+<style>
+:root {
+    --pearl: #f8f6f4;
+    --rose-gold: #b76e79;
+    --charcoal: #2b2b2b;
+    --light-gray: #e5e5e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+body {
+    background: var(--pearl);
+    color: var(--charcoal);
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: white;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+nav h1 {
+    color: var(--rose-gold);
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: var(--charcoal);
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: var(--rose-gold);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+/* SECTION */
+.section {
+    padding: 70px 60px;
+}
+
+/* BEFORE AFTER */
+.before-after {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.img-placeholder {
+    height: 180px;
+    background: var(--light-gray);
+    margin-bottom: 10px;
+}
+
+/* SPECIALIST */
+.specialist {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.specialist img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    text-align: center;
+}
+
+.testimonial-box {
+    max-width: 600px;
+    margin: auto;
+}
+
+.testimonial {
+    display: none;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+/* BOOK */
+.booking {
+    text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid var(--light-gray);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-top: 1px solid var(--light-gray);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <h1>Elite Aesthetic</h1>
+    <div>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#doctor">Specialist</a>
+        <a href="#book">Book</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h2>Refined Beauty. Expert Care.</h2>
+    <p>Experience premium aesthetic surgery with precision, artistry, and personalized treatment plans.</p>
+    <button class="btn">Book Consultation</button>
+</section>
+
+<!-- BEFORE AFTER -->
+<section class="section" id="services">
+    <h2>Before & After Results</h2>
+    <br><br>
+    <div class="before-after">
+        <div class="card">
+            <div class="img-placeholder"></div>
+            <p>Rhinoplasty</p>
+        </div>
+        <div class="card">
+            <div class="img-placeholder"></div>
+            <p>Facelift</p>
+        </div>
+        <div class="card">
+            <div class="img-placeholder"></div>
+            <p>Lip Enhancement</p>
+        </div>
+    </div>
+</section>
+
+<!-- SPECIALIST -->
+<section class="section specialist" id="doctor">
+    <img src="https://via.placeholder.com/250" alt="Doctor">
+    <div>
+        <h2>Meet the Specialist</h2>
+        <p><strong>Dr. Sarah Williams</strong></p>
+        <p>Board-certified aesthetic surgeon with 15+ years of experience specializing in facial and body contouring procedures.</p>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials">
+    <h2>Patient Testimonials</h2>
+    <br>
+    <div class="testimonial-box">
+        <div class="testimonial active">"Absolutely life-changing results. Highly recommended!"</div>
+        <div class="testimonial">"Professional staff and amazing care throughout."</div>
+        <div class="testimonial">"I feel more confident than ever."</div>
+    </div>
+</section>
+
+<!-- BOOK -->
+<section class="section booking" id="book">
+    <h2>Book Appointment</h2>
+    <br>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="date" required>
+        <textarea placeholder="Message"></textarea>
+        <button class="btn">Submit</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Elite Aesthetic Clinic</p>
+</footer>
+
+<script>
+let index = 0;
+const testimonials = document.querySelectorAll(".testimonial");
+
+function showNextTestimonial() {
+    testimonials[index].classList.remove("active");
+    index = (index + 1) % testimonials.length;
+    testimonials[index].classList.add("active");
+}
+
+setInterval(showNextTestimonial, 3000);
+</script>
+
+</body>
+</html>

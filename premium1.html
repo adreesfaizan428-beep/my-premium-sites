@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Élan Noir | Luxury Real Estate</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --black: #0a0a0a;
+    --gold: #d4af37;
+    --gold-soft: #e6c76b;
+    --white: #f5f5f5;
+    --glass: rgba(255,255,255,0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10,10,10,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav h2 {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)),
+        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.btn {
+    padding: 14px 30px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+/* SECTION */
+section {
+    padding: 100px 60px;
+}
+
+/* LISTINGS */
+.listings h2 {
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.price {
+    color: var(--gold-soft);
+}
+
+/* FORM */
+.form-section {
+    background: #111;
+}
+
+form {
+    max-width: 700px;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+}
+
+input, textarea {
+    background: transparent;
+    border: 1px solid #333;
+    padding: 15px;
+    color: var(--white);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+button {
+    padding: 15px;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+/* FOOTER */
+footer {
+    padding: 40px 60px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav {
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Élan Noir</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="#listings">Listings</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Where Luxury Meets Legacy</h1>
+        <p>Discover private residences curated for the world’s most discerning buyers.</p>
+        <a href="#listings" class="btn">Explore Listings</a>
+    </div>
+</section>
+
+<!-- LISTINGS -->
+<section class="listings" id="listings">
+    <h2>Private Listings</h2>
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811">
+            <div class="card-overlay">
+                <h3>Beverly Hills Estate</h3>
+                <p class="price">$12,500,000</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c">
+            <div class="card-overlay">
+                <h3>Modern Glass Villa</h3>
+                <p class="price">$8,900,000</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e">
+            <div class="card-overlay">
+                <h3>Oceanfront Mansion</h3>
+                <p class="price">$15,200,000</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="contact">
+    <h2 style="text-align:center; margin-bottom:40px;">Schedule a Private Tour</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number">
+        <input type="date">
+        <textarea rows="5" placeholder="Preferred Property & Notes"></textarea>
+        <button type="submit">Request Private Viewing</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Élan Noir — Private Luxury Real Estate
+</footer>
+
+</body>
+</html>
