@@ -3,37 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Website Collection - For Sale</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ZK Services | Premium Digital Solutions</title>
+    <style>
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #000000; 
+            color: #E0E0E0; 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.6;
+        }
+        header { 
+            padding: 80px 20px; 
+            text-align: center; 
+            background: linear-gradient(135deg, #1A1A1A, #000000); 
+            border-bottom: 2px solid #DAA520; 
+        }
+        header h1 { 
+            font-size: 3em; 
+            color: #DAA520; 
+            margin: 0;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        header p { 
+            font-size: 1.2em; 
+            color: #94a3b8; 
+            margin-top: 10px;
+        }
+        .container { 
+            max-width: 1100px; 
+            margin: auto; 
+            padding: 50px 20px; 
+        }
+        .about-section {
+            background-color: #111111;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #333333;
+            box-shadow: 0 4px 15px rgba(218, 165, 32, 0.1);
+        }
+        .about-section h2 { color: #DAA520; text-align: center; }
+        .services { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin-top: 60px; 
+        }
+        .card { 
+            background: #111111; 
+            padding: 30px; 
+            border-radius: 12px; 
+            border: 1px solid #444444; 
+            text-align: center; 
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); border-color: #DAA520; }
+        .card h3 { color: #DAA520; font-size: 1.4em; }
+        .portfolio-btn { 
+            display: inline-block; 
+            background-color: #DAA520; 
+            color: #000000; 
+            padding: 15px 30px; 
+            border-radius: 30px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            margin-top: 30px;
+            box-shadow: 0 4px 10px rgba(218, 165, 32, 0.3);
+        }
+        .cta-section {
+            text-align: center;
+            margin-top: 80px;
+            padding: 50px;
+            background: linear-gradient(135deg, #DAA520, #C1921E);
+            border-radius: 20px;
+            color: #000000;
+        }
+        .cta-btn {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        footer { 
+            text-align: center; 
+            padding: 60px 20px; 
+            font-size: 0.9em; 
+            color: #444444; 
+            border-top: 1px solid #1A1A1A;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body>
 
-    <header class="py-10 text-center bg-gradient-to-r from-blue-600 to-purple-600">
-        <h1 class="text-4xl font-bold">Premium Digital Assets Portfolio</h1>
-        <p class="mt-2 text-lg opacity-90">50+ Professionally Coded & Hosted Websites Ready for Sale</p>
-    </header>
+<header>
+    <h1>ZK Services</h1>
+    <p>Premium Digital Solutions | Shopify | SEO | Web Development</p>
+    <a href="https://my-premium-sites-mbiy.vercel.app" class="portfolio-btn">Discover My 50+ Projects</a>
+</header>
 
-    <main class="max-w-6xl mx-auto p-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            <div class="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition">
-                <h3 class="text-xl font-semibold mb-2">Pet Care & Adoption Service</h3>
-                <p class="text-gray-400 text-sm mb-4">SEO Friendly, High Performance, Mobile Responsive.</p>
-                <a href="https://endearing-paletas-d48c3b.netlify.app/" target="_blank" class="inline-block bg-blue-500 px-4 py-2 rounded text-sm font-bold hover:bg-blue-600">Live Preview</a>
-            </div>
+<div class="container">
+    <div class="about-section">
+        <h2>Who We Are</h2>
+        <p>ZK Services specializes in building high-performance digital solutions with 50+ hand-coded websites experience. We deliver a blend of elite web development and strategic ranking expertise.</p>
+    </div>
 
-            <div class="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition">
-                <h3 class="text-xl font-semibold mb-2">Modern Architecture Design</h3>
-                <p class="text-gray-400 text-sm mb-4">Clean Layout, Premium UI/UX for Business Clients.</p>
-                <a href="https://snazzy-kelpie-e3b383.netlify.app/" target="_blank" class="inline-block bg-blue-500 px-4 py-2 rounded text-sm font-bold hover:bg-blue-600">Live Preview</a>
-            </div>
+    <div class="services">
+        <div class="card">
+            <h3>Elite Shopify Expert</h3>
+            <p>Store setup, theme customization, and e-commerce growth strategies.</p>
+        </div>
+        <div class="card">
+            <h3>Custom Web Development</h3>
+            <p>High-speed websites crafted with clean HTML, CSS, and modern architecture.</p>
+        </div>
+        <div class="card">
+            <h3>Premium SEO Strategy</h3>
+            <p>Top-tier Google rankings through Technical SEO and content strategy.</p>
+        </div>
+    </div>
 
-            </div>
-    </main>
+    <div class="cta-section">
+        <h2>Ready to Scale Your Business?</h2>
+        <p>Let's discuss your project today.</p>
+        <a href="https://wa.me/923467594592?text=Hi%20ZK%20Services,%20I'm%20interested%20in%20your%20services." class="cta-btn">Connect on WhatsApp</a>
+    </div>
+</div>
 
-    <footer class="text-center py-10 text-gray-500 border-t border-gray-800">
-        <p>Contact for Bulk Purchase or Individual Sites</p>
-    </footer>
+<footer>
+    <p>&copy; 2026 ZK Services. Delivering Excellence.</p>
+</footer>
 
 </body>
 </html>
+
