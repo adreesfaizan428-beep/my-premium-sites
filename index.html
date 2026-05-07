@@ -3,142 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZK Services | Premium Digital Solutions</title>
+    <title>F A TOOL | THE ULTIMATE DIGITAL OPERATING SYSTEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Montserrat', sans-serif; 
-            background-color: #000000; 
-            color: #E0E0E0; 
-            margin: 0; 
-            padding: 0; 
-            line-height: 1.6;
+        :root {
+            --gold: #FFD700;
+            --dark: #000000;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
         }
-        header { 
-            padding: 80px 20px; 
-            text-align: center; 
-            background: linear-gradient(135deg, #1A1A1A, #000000); 
-            border-bottom: 2px solid #DAA520; 
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+        body {
+            background-color: var(--dark);
+            color: white;
+            overflow-x: hidden;
         }
-        header h1 { 
-            font-size: 3em; 
-            color: #DAA520; 
-            margin: 0;
-            letter-spacing: 2px;
-            font-weight: 700;
+
+        /* --- Global Glow Background --- */
+        .glow-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% -20%, rgba(255, 215, 0, 0.15), transparent 50%);
+            z-index: -1;
         }
-        header p { 
-            font-size: 1.2em; 
-            color: #94a3b8; 
-            margin-top: 10px;
+
+        /* --- Navbar --- */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 25px 10%;
+            display: flex; justify-content: space-between; align-items: center;
+            backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+            z-index: 1000;
         }
-        .container { 
-            max-width: 1100px; 
-            margin: auto; 
-            padding: 50px 20px; 
+
+        .logo { font-family: 'Syncopate', sans-serif; font-size: 1.5rem; color: var(--gold); letter-spacing: 5px; }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; background: url('https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            background-blend-mode: multiply; background-color: rgba(0,0,0,0.8);
         }
-        .about-section {
-            background-color: #111111;
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid #333333;
-            box-shadow: 0 4px 15px rgba(218, 165, 32, 0.1);
+
+        h1 {
+            font-family: 'Syncopate', sans-serif;
+            font-size: clamp(3rem, 12vw, 8rem);
+            line-height: 0.8; margin-bottom: 20px;
+            background: linear-gradient(to bottom, #fff, var(--gold));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
-        .about-section h2 { color: #DAA520; text-align: center; }
-        .services { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 25px; 
-            margin-top: 60px; 
+
+        .stats-bar {
+            display: flex; gap: 40px; margin-top: 50px;
+            padding: 20px 40px; background: var(--glass);
+            border: 1px solid var(--border); border-radius: 100px;
         }
-        .card { 
-            background: #111111; 
-            padding: 30px; 
-            border-radius: 12px; 
-            border: 1px solid #444444; 
-            text-align: center; 
-            transition: transform 0.3s ease, border-color 0.3s ease;
+
+        .stat-item span { color: var(--gold); font-weight: 800; font-size: 1.2rem; }
+
+        /* --- Ultra-Professional Cards --- */
+        .main-container { padding: 100px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+
+        .card {
+            background: var(--glass); border: 1px solid var(--border);
+            border-radius: 40px; padding: 60px 40px; position: relative;
+            transition: 0.5s cubic-bezier(0.2, 1, 0.3, 1); overflow: hidden;
         }
-        .card:hover { transform: translateY(-5px); border-color: #DAA520; }
-        .card h3 { color: #DAA520; font-size: 1.4em; }
-        .portfolio-btn { 
-            display: inline-block; 
-            background-color: #DAA520; 
-            color: #000000; 
-            padding: 15px 30px; 
-            border-radius: 30px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            margin-top: 30px;
-            box-shadow: 0 4px 10px rgba(218, 165, 32, 0.3);
+
+        .card:hover {
+            transform: translateY(-20px); border-color: var(--gold);
+            background: rgba(255, 215, 0, 0.05);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.5);
         }
-        .cta-section {
-            text-align: center;
-            margin-top: 80px;
-            padding: 50px;
-            background: linear-gradient(135deg, #DAA520, #C1921E);
-            border-radius: 20px;
-            color: #000000;
+
+        .card img {
+            width: 100%; height: 200px; object-fit: cover;
+            border-radius: 20px; margin-bottom: 30px;
+            filter: grayscale(100%); transition: 0.5s;
         }
-        .cta-btn {
-            background-color: #ffffff;
-            color: #000000;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            display: inline-block;
+
+        .card:hover img { filter: grayscale(0%); transform: scale(1.05); }
+
+        .card h2 { color: var(--gold); font-size: 2rem; margin-bottom: 15px; }
+        .card p { color: #888; line-height: 1.7; }
+
+        /* --- Footer --- */
+        footer {
+            padding: 100px 10%; text-align: center;
+            background: linear-gradient(to top, #111, #000);
+            border-top: 1px solid var(--border);
         }
-        footer { 
-            text-align: center; 
-            padding: 60px 20px; 
-            font-size: 0.9em; 
-            color: #444444; 
-            border-top: 1px solid #1A1A1A;
+
+        .end-btn {
+            padding: 25px 60px; background: var(--gold); color: black;
+            font-weight: 800; font-size: 1.2rem; border-radius: 100px;
+            text-decoration: none; display: inline-block; transition: 0.4s;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
         }
+
+        .end-btn:hover { transform: scale(1.1); box-shadow: 0 0 60px rgba(255, 215, 0, 0.5); }
+
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <h1>ZK Services</h1>
-    <p>Premium Digital Solutions | Shopify | SEO | Web Development</p>
-    <a href="https://my-premium-sites-mbiy.vercel.app" class="portfolio-btn">Discover My 50+ Projects</a>
-</header>
+<div class="glow-overlay"></div>
 
-<div class="container">
-    <div class="about-section">
-        <h2>Who We Are</h2>
-        <p>ZK Services specializes in building high-performance digital solutions with 50+ hand-coded websites experience. We deliver a blend of elite web development and strategic ranking expertise.</p>
+<nav>
+    <div class="logo">F A TOOL</div>
+    <div style="font-size: 0.8rem; letter-spacing: 3px;">SYSTEM VERSION 4.0.2</div>
+</nav>
+
+<section class="hero">
+    <p style="letter-spacing: 10px; color: var(--gold); margin-bottom: 20px;">GLOBAL UTILITY HUB</p>
+    <h1>F A<br>TOOL</h1>
+    
+    <div class="stats-bar">
+        <div class="stat-item"><span>500k+</span> USERS</div>
+        <div class="stat-item"><span>100%</span> SECURE</div>
+        <div class="stat-item"><span>AI</span> DRIVEN</div>
+    </div>
+</section>
+
+<div class="main-container">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop" alt="Repair">
+        <h2>REPAIR CORE</h2>
+        <p>Instant hardware and software diagnostic engine. Solve complex tech issues with neural precision.</p>
     </div>
 
-    <div class="services">
-        <div class="card">
-            <h3>Elite Shopify Expert</h3>
-            <p>Store setup, theme customization, and e-commerce growth strategies.</p>
-        </div>
-        <div class="card">
-            <h3>Custom Web Development</h3>
-            <p>High-speed websites crafted with clean HTML, CSS, and modern architecture.</p>
-        </div>
-        <div class="card">
-            <h3>Premium SEO Strategy</h3>
-            <p>Top-tier Google rankings through Technical SEO and content strategy.</p>
-        </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" alt="Design">
+        <h2>VISUAL ENGINE</h2>
+        <p>Generate high-end 3D assets and luxury digital content using the world's most advanced AI models.</p>
     </div>
 
-    <div class="cta-section">
-        <h2>Ready to Scale Your Business?</h2>
-        <p>Let's discuss your project today.</p>
-        <a href="https://wa.me/923467594592?text=Hi%20ZK%20Services,%20I'm%20interested%20in%20your%20services." class="cta-btn">Connect on WhatsApp</a>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" alt="SEO">
+        <h2>SEO ARCHITECT</h2>
+        <p>Proprietary ranking algorithms to dominate global search results and scale traffic instantly.</p>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 ZK Services. Delivering Excellence.</p>
+    <h2 style="font-size: 3rem; margin-bottom: 30px;">READY TO REVOLUTIONIZE?</h2>
+    <a href="https://wa.me/923319695250" class="end-btn">GET STARTED NOW</a>
+    <p style="margin-top: 50px; color: #444;">&copy; 2026 F A TOOL. ALL RIGHTS RESERVED.</p>
 </footer>
 
 </body>
 </html>
-
